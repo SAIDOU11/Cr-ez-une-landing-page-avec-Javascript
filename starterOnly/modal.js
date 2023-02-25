@@ -20,4 +20,17 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+// Const
+const closeModalBg = document.querySelector(".bground");
+const closeBtn = document.querySelectorAll(".close");
 
+// addEventListener on click & closeModal() close backgroung modal;
+function closeModal() {
+  closeModalBg.style.display = "none";
+}
+
+closeBtn[0].addEventListener("click", () => {
+  return closeModal();
+});
+
+//

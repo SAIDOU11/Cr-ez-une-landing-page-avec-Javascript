@@ -1,5 +1,3 @@
-just get the repo
-
 # Projet GameOn
 
 1. Forkez ce repo ;
