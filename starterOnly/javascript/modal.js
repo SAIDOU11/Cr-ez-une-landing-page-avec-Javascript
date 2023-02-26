@@ -33,13 +33,5 @@ closeBtn[0].addEventListener("click", () => {
   return closeModal();
 });
 
-// const birthMessage = document.getElementById("birth-Message");
-
 // const registForm = document.getElementsByName("reserve");
 // console.log(registForm);
-
-// const birthDate = document.getElementById("birthdate");
-// console.log(birthDate);
-
-// const quantity = document.getElementById("quantity");
-// console.log(quantity);
