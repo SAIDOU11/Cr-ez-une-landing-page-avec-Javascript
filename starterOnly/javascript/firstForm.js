@@ -2,37 +2,29 @@
 const firstName = document.getElementById("first");
 const firstMessage = document.getElementById("first-Message");
 
-// Event function
-firstName.addEventListener("change", () => {
-  console.log("fonctionne???");
-  validFirst(this);
-});
-
 // function input validation & message
-const validFirst = (inputFirst) => {
+export const validFirst = () => {
   let firstRegExp = new RegExp(/[a-zA-Z]{2,}/);
-  let firstValue = inputFirst["first"].value;
+  let firstValue = firstName.value;
   let firstTest = firstRegExp.test(firstValue);
-
+  console.log("essaaaaaa", firstValue);
   if (firstTest) {
-    validFirstMessage();
+    firstMessage.textContent = "Prénom Valide";
+    firstMessage.style.fontSize = "15px";
+    firstMessage.style.color = "green";
+    firstMessage.style.marginBottom = "5px";
+    return true;
   } else {
-    errorFirstMessage();
+    firstMessage.textContent = "Prénom Non Valide";
+    firstMessage.style.fontSize = "15px";
+    firstMessage.style.color = "red";
+    firstMessage.style.marginBottom = "5px";
+    return false;
   }
 };
 
-// Message Prénom valide
-const validFirstMessage = () => {
-  firstMessage.textContent = "Prénom Valide";
-  firstMessage.style.fontSize = "15px";
-  firstMessage.style.color = "green";
-  firstMessage.style.marginBottom = "5px";
-};
-
-// Message Prénom non valide
-const errorFirstMessage = () => {
-  firstMessage.textContent = "Prénom Non Valide";
-  firstMessage.style.fontSize = "15px";
-  firstMessage.style.color = "red";
-  firstMessage.style.marginBottom = "5px";
-};
+// Event function
+firstName.addEventListener("change", () => {
+  console.log(firstName);
+  validFirst();
+});

@@ -54,7 +54,15 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close btn-close-confirm"></span>
+
+           <!-- modalConfirmation -->
+           <div class="formConfirmation">
+            <!-- <span>Merci ! <br> Votre réservation a été reçue.</span> -->
+            <!-- <button class="btn-close-confirm"  type="submit"  value="Fermer">Fermer</button>  -->
+          </div>
+          <!-- fin de la modalConfirmation -->
+
           <div class="modal-body">
             <form
               name="reserve"
@@ -177,7 +185,7 @@
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
-                >
+                > <p id="error-Location"><!--  message  --></p>
               </div>
 
               <div
@@ -198,11 +206,11 @@
                   <span class="checkbox-icon"></span>
                   Je Je souhaite être prévenu des prochains évènements.
                 </label>
-                <br>
+                <p id="error-Checkbox"><!--  message  --></p>
               </div>
               <input
                 class="btn-submit"
-                type="submit"
+                type="button"
                 class="button"
                 value="C'est parti"
               />
@@ -216,11 +224,14 @@
         Copyright 2014 - 2022, GameOn Inc.
       </p>
     </footer>
-    <script src="./javascript/modal.js"></script>
-    <script src="./javascript/emailForm.js"></script>
-    <script src="./javascript/firstForm.js"></script>
+    <script type="module" src="./javascript/modal.js"></script>
+     <script src="./javascript/emailForm.js"></script>
+    <script type="module"  src="./javascript/firstForm.js"></script>
     <script src="./javascript/lastForm.js"></script>
     <script src="./javascript/birthForm.js"></script>
-    <script src="./javascript/quantity.js"></script>
+    <script src="./javascript/quantity.js"></script> 
+    <script src="./javascript/turnamentForm.js"></script> 
+    <script src="./javascript/checkbox.js"></script>
+    <script type="module"  src="./javascript/submitForm.js"></script>
   </body>
 </html>
