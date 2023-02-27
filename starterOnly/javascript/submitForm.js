@@ -1,4 +1,4 @@
-import { validFirst } from "./firstForm.js";
+import { validFirst, validLast } from "./validation.js";
 
 // Const
 const btnSubmit = document.querySelector(".btn-submit");
