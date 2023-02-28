@@ -34,4 +34,7 @@ closeBtn[0].addEventListener("click", () => {
 });
 
 // const registForm = document.getElementsByName("reserve");
-// console.log(registForm);
+
+// registForm[0].addEventListener("submit", (e) => {
+//   e.preventDefault();
+// });
