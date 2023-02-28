@@ -529,6 +529,8 @@ footer {
   }
 }
 
+/* comm */
+
 .formConfirmation {
   padding: 3rem 8%;
   margin: 15px auto;
@@ -555,4 +557,28 @@ footer {
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+
+/* 
+@media screen and (max-width: 768px)
+
+*/
+@media screen and (max-width: 540px) {
+  body {
+    height: 736px;
+  }
+  .hero-headline {
+    height: 109px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .hero-section {
+    height: 534 px;
+    position: absolute;
+    left: 7.25%;
+    right: 7.25%;
+    top: 10.87%;
+    bottom: 16.58%;
+  }
+  /* width: 414px; */
 }
