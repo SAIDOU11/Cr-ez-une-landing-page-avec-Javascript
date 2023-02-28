@@ -7,9 +7,10 @@ const emailAddress = document.getElementById("email");
 const emailMessage = document.getElementById("email-Message");
 const birthDate = document.getElementById("birthdate");
 const birthMessage = document.getElementById("birth-Message");
-let locationCheck = document.getElementsByName("location");
-let locationMessage = document.getElementById("error-Location");
-
+const locationCheck = document.getElementsByName("location");
+const locationMessage = document.getElementById("error-Location");
+const checkboxCase = document.getElementById("checkbox1");
+const ifCheckCase = document.getElementById("error-Checkbox");
 // Const
 const quantity = document.getElementById("quantity");
 const quantityMessage = document.getElementById("quantity-Message");
@@ -148,10 +149,7 @@ export const controlCheckbox = () => {
   }
 };
 
-let checkboxCase = document.getElementById("checkbox1");
-let ifCheckCase = document.getElementById("error-Checkbox");
-
-export const ifCheckboxFilled = () => {
+const ifCheckboxFilled = () => {
   if (checkboxCase.checked) {
     checkboxCase.style.border = "solid 2px green";
     ifCheckCase.textContent = "Champs Valide";
@@ -191,12 +189,10 @@ birthDate.addEventListener("change", () => {
   validBirthDate();
 });
 
-// Event function
 quantity.addEventListener("change", () => {
   validQuantity();
 });
 
-// Event function
 locationCheck.forEach((check) =>
   check.addEventListener("change", function () {
     controlCheckbox();
