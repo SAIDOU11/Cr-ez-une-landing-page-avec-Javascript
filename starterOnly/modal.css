@@ -562,7 +562,18 @@ footer {
   border: 0;
 }
 
+/* Media queries phone size */
+
 @media screen and (max-width: 425px) {
+  /* body {
+    width: 100%;
+    height: 736px;
+  } */
+  main {
+    padding: 0;
+    height: 630px;
+    margin: 0 20px;
+  }
   #myTopnav > div.header-logo > img > div.main-navbar {
     width: 10em;
     margin-top: 20px;
@@ -571,7 +582,7 @@ footer {
     height: 19px;
   }
   .topnav {
-    margin: 38px 27px 0px;
+    margin: 38px 20px 20px;
   }
   .topnav a.icon {
     float: right;
@@ -590,31 +601,39 @@ footer {
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
-    font-size: 40px;
-
-    color: #000000;
+    font-size: 41px;
   }
   .hero-text {
     width: 100%;
-    font-size: 0.6rem;
-    min-width: 424px;
-    left: 0%;
-    right: 3.67%;
-    top: 23.6%;
-    bottom: 70.04%;
 
+    margin-top: 25px;
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 17px;
-
-    color: #000000;
   }
   .hero-img {
     width: 354px;
     height: 329px;
     border-radius: 10px;
+  }
+  .hero-section > .btn-signup {
+    margin: 35px auto 35px;
+  }
+  .copyrights {
+    font-size: 14px;
+  }
+  .bground {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 45px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    /* background-color: rgba(26, 39, 156, 0.4); */
   }
   /* img {
     width: 100%;
