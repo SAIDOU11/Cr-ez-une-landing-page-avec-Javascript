@@ -1,3 +1,4 @@
+// ALL FUNCTIONS IMPORTED
 import {
   validFirst,
   validLast,
@@ -15,7 +16,6 @@ const form = document.querySelector("form");
 
 btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("essaie");
   if (
     (validFirst(),
     validLast(),
@@ -31,7 +31,7 @@ btnSubmit.addEventListener("click", (e) => {
   }
 }); //
 
-// Fonction pour fermer la modale de confirmation d'inscription
+// function to close modal of subscription
 
 btnCloseConfirm.addEventListener("click", () => {
   window.location.reload();

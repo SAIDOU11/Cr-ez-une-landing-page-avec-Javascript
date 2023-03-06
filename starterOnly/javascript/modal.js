@@ -32,9 +32,3 @@ function closeModal() {
 closeBtn[0].addEventListener("click", () => {
   return closeModal();
 });
-
-// const registForm = document.getElementsByName("reserve");
-
-// registForm[0].addEventListener("submit", (e) => {
-//   e.preventDefault();
-// });
