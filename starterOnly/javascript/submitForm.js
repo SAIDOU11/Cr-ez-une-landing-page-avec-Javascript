@@ -6,6 +6,7 @@ import {
   validBirthDate,
   controlCheckbox,
   validQuantity,
+  ifCheckboxFilled,
 } from "./validation.js";
 
 // Const
@@ -14,6 +15,7 @@ const modalConfirmation = document.querySelector(".formConfirmation");
 const btnCloseConfirm = document.querySelector(".btn-close-confirm2");
 const form = document.querySelector("form");
 
+// function button submit
 btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   if (
@@ -22,7 +24,8 @@ btnSubmit.addEventListener("click", (e) => {
     validEmail(),
     validBirthDate(),
     validQuantity(),
-    controlCheckbox())
+    controlCheckbox(),
+    ifCheckboxFilled())
   ) {
     modalConfirmation.style.display = "block";
     form.style.display = "none";

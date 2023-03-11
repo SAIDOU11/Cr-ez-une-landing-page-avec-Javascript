@@ -7,12 +7,13 @@ const emailAddress = document.getElementById("email");
 const emailMessage = document.getElementById("email-Message");
 const birthDate = document.getElementById("birthdate");
 const birthMessage = document.getElementById("birth-Message");
-const locationCheck = document.getElementsByName("location");
-const locationMessage = document.getElementById("error-Location");
-const checkboxCase = document.getElementById("checkbox1");
-const ifCheckCase = document.getElementById("error-Checkbox");
 const quantity = document.getElementById("quantity");
 const quantityMessage = document.getElementById("quantity-Message");
+const locationCheck = document.getElementsByName("location");
+const locationMessage = document.getElementById("error-Location");
+const checkboxOne = document.getElementById("checkbox1");
+const checkboxTwo = document.getElementById("checkbox2");
+const ifCheckCase = document.getElementById("error-Checkbox");
 
 // function input validation firstName & message
 export const validFirst = () => {
@@ -125,17 +126,14 @@ export const validQuantity = () => {
   }
 };
 
-// function input validation controlCheckbox & message
+// // function input validation controlCheckbox & message
 export const controlCheckbox = () => {
+  let locTournamentCheck = false;
   for (let i = 0; i < locationCheck.length; i++) {
+    const isCheck = locationCheck[i].checked;
     // conditions
-    if (locationCheck[i].checked) {
-      console.log(
-        locationCheck,
-        locationCheck.value,
-        locationCheck[i].value,
-        locationCheck.length
-      );
+    if (isCheck) {
+      locTournamentCheck = true;
       locationMessage.textContent = "Champ Valide";
       locationMessage.style.color = "green";
       locationMessage.style.fontSize = "15px";
@@ -146,22 +144,24 @@ export const controlCheckbox = () => {
       locationMessage.style.color = "red";
       locationMessage.style.fontSize = "15px";
       locationMessage.style.marginBottom = "10px";
-      return false;
     }
   }
 };
 
-const ifCheckboxFilled = () => {
+// function conditions checkbox
+export const ifCheckboxFilled = () => {
   // conditions
-  if (checkboxCase.checked) {
-    checkboxCase.style.border = "solid 2px green";
+  if (checkboxOne.checked && checkboxTwo.checked === true) {
+    checkboxOne.style.border = "solid 2px green";
+    checkboxTwo.style.border = "solid 2px green";
     ifCheckCase.textContent = "Champs Valide";
     ifCheckCase.style.color = "green";
     ifCheckCase.style.fontSize = "15px";
     ifCheckCase.style.marginBottom = "10px";
     return true;
   } else {
-    checkboxCase.style.border = "solid 2px red";
+    checkboxOne.style.border = "solid 2px green";
+    checkboxTwo.style.border = "solid 2px red";
     ifCheckCase.textContent = "Merci d'accepter les conditions d'utilisations";
     ifCheckCase.style.fontSize = "15px";
     ifCheckCase.style.marginBottom = "10px";
@@ -170,11 +170,7 @@ const ifCheckboxFilled = () => {
   }
 };
 
-// All Event functions
-checkboxCase.addEventListener("change", () => {
-  // conditions
-  ifCheckboxFilled();
-});
+// // All Event functions
 
 firstName.addEventListener("change", () => {
   validFirst();
@@ -201,3 +197,13 @@ locationCheck.forEach((check) =>
     controlCheckbox();
   })
 );
+
+checkboxOne.addEventListener("change", () => {
+  // conditions
+  ifCheckboxFilled();
+});
+
+checkboxTwo.addEventListener("change", () => {
+  // conditions
+  ifCheckboxFilled();
+});
