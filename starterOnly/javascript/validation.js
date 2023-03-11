@@ -131,9 +131,11 @@ export const controlCheckbox = () => {
   let locTournamentCheck = false;
   for (let i = 0; i < locationCheck.length; i++) {
     const isCheck = locationCheck[i].checked;
+    console.log(isCheck, locationCheck[i]);
     // conditions
     if (isCheck) {
       locTournamentCheck = true;
+      console.log(locTournamentCheck);
       locationMessage.textContent = "Champ Valide";
       locationMessage.style.color = "green";
       locationMessage.style.fontSize = "15px";
