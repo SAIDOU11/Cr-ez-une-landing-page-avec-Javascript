@@ -24,11 +24,12 @@ function launchModal() {
 const closeModalBg = document.querySelector(".bground");
 const closeBtn = document.querySelectorAll(".close");
 
-// addEventListener on click & closeModal() close backgroung modal;
+// addEventListener on click to closeModal()
 function closeModal() {
   closeModalBg.style.display = "none";
 }
 
+// addEventListener on click to close backgroung modal
 closeBtn[0].addEventListener("click", () => {
   return closeModal();
 });

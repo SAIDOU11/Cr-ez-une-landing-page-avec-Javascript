@@ -1,4 +1,4 @@
-// Const
+// CONST
 const firstName = document.getElementById("first");
 const firstMessage = document.getElementById("first-Message");
 const lastName = document.getElementById("last");
@@ -15,12 +15,12 @@ const checkboxOne = document.getElementById("checkbox1");
 const checkboxTwo = document.getElementById("checkbox2");
 const ifCheckCase = document.getElementById("error-Checkbox");
 
-// function input validation firstName & message
+// FUNCTION INPUT VALIDATION FIRSTNAME & MESSAGE
 export const validFirst = () => {
   let firstRegExp = new RegExp(/[a-zA-Z]{2,}/);
   let firstValue = firstName.value;
   let firstTest = firstRegExp.test(firstValue);
-  // conditions
+  // CONDITION IF ELSE
   if (firstTest) {
     firstMessage.textContent = "Prénom Valide";
     firstMessage.style.fontSize = "15px";
@@ -36,13 +36,13 @@ export const validFirst = () => {
   }
 };
 
-// function input validation lastName & message
+// FUNCTION INPUT VALIDATION LASTNAME & MESSAGE
 export const validLast = () => {
   let lastRegExp = new RegExp(/[a-zA-Z]{2,}/);
   let lastValue = lastName.value;
   console.log(lastValue);
   let lastTest = lastRegExp.test(lastValue);
-  // conditions
+  // CONDITION IF ELSE
   if (lastTest) {
     lastMessage.textContent = "Nom Valide";
     lastMessage.style.fontSize = "15px";
@@ -58,7 +58,7 @@ export const validLast = () => {
   }
 };
 
-// function input validation email & message
+// FUNCTION INPUT VALIDATION EMAIL & MESSAGE
 export const validEmail = () => {
   let emailRegExp = new RegExp(
     "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$",
@@ -66,7 +66,7 @@ export const validEmail = () => {
   );
   let emailValue = emailAddress.value;
   let emailTest = emailRegExp.test(emailValue);
-  // conditions
+  // CONDITION IF ELSE
   if (emailTest) {
     emailMessage.textContent = "Adresse Valide";
     emailMessage.style.fontSize = "15px";
@@ -82,14 +82,14 @@ export const validEmail = () => {
   }
 };
 
-// function input validation birthDate & message
+// FUNCTION INPUT VALIDATION BIRTHDATE & MESSAGE
 export const validBirthDate = () => {
   let birthRegExp = new RegExp(
     /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/
   );
   let birthValue = birthDate.value;
   let birthTest = birthRegExp.test(birthValue);
-  // conditions
+  // CONDITION IF ELSE
   if (birthTest) {
     birthMessage.textContent = "Date de naissance Valide";
     birthMessage.style.fontSize = "15px";
@@ -105,12 +105,12 @@ export const validBirthDate = () => {
   }
 };
 
-// function input validation quantity & message
+// // FUNCTION INPUT VALIDATION QUANTITY & MESSAGE
 export const validQuantity = () => {
   let quantityRegExp = new RegExp(/^[0-9]+$/);
   let quantityValue = quantity.value;
   let quantityTest = quantityRegExp.test(quantityValue);
-  // conditions
+  // CONDITION IF ELSE
   if (quantityTest) {
     quantityMessage.textContent = "Quantité Valide";
     quantityMessage.style.fontSize = "15px";
@@ -126,13 +126,13 @@ export const validQuantity = () => {
   }
 };
 
-// // function input validation controlCheckbox & message
+// FUNCTION INPUT VALIDATION CHECKBOX LOCATION TOURNAMENT & MESSAGE
 export const controlCheckbox = () => {
   let locTournamentCheck = false;
   for (let i = 0; i < locationCheck.length; i++) {
     const isCheck = locationCheck[i].checked;
     console.log(isCheck, locationCheck[i]);
-    // conditions
+    // CONDITION IF ELSE
     if (isCheck) {
       locTournamentCheck = true;
       console.log(locTournamentCheck);
@@ -150,9 +150,9 @@ export const controlCheckbox = () => {
   }
 };
 
-// function conditions checkbox
+// // FUNCTION INPUT VALIDATION FOR 2 CHECKBOXES & MESSAGE
 export const ifCheckboxFilled = () => {
-  // conditions
+  // CONDITION IF ELSE
   if (checkboxOne.checked && checkboxTwo.checked === true) {
     checkboxOne.style.border = "solid 2px green";
     checkboxTwo.style.border = "solid 2px green";
@@ -172,40 +172,45 @@ export const ifCheckboxFilled = () => {
   }
 };
 
-// // All Event functions
-
+// EVENT FUNCTION ON CHANGE FOR FIRSTNAME
 firstName.addEventListener("change", () => {
+  // LAUNCH FUNCTION ON CHANGE
   validFirst();
 });
-
+// EVENT FUNCTION ON CHANGE FOR LASTNAME
 lastName.addEventListener("change", () => {
+  // LAUNCH FUNCTION ON CHANGE
   validLast();
 });
-
+// EVENT FUNCTION ON CHANGE FOR EMAIL ADDRESS
 emailAddress.addEventListener("change", () => {
+  // LAUNCH FUNCTION ON CHANGE
   validEmail();
 });
-
+// EVENT FUNCTION ON CHANGE FOR BIRTH DATE
 birthDate.addEventListener("change", () => {
+  // LAUNCH FUNCTION ON CHANGE
   validBirthDate();
 });
-
+// EVENT FUNCTION ON CHANGE FOR QUANTITY
 quantity.addEventListener("change", () => {
+  // LAUNCH FUNCTION ON CHANGE
   validQuantity();
 });
-
+// EVENT FUNCTION ON CHANGE FOR LOCATION
 locationCheck.forEach((check) =>
   check.addEventListener("change", function () {
+    // LAUNCH FUNCTION ON CHANGE
     controlCheckbox();
   })
 );
-
+// EVENT FUNCTION ON CHANGE FOR CHECKBOX 1
 checkboxOne.addEventListener("change", () => {
-  // conditions
+  // LAUNCH FUNCTION ON CHANGE
   ifCheckboxFilled();
 });
-
+// EVENT FUNCTION ON CHANGE FOR CHECKBOX 2
 checkboxTwo.addEventListener("change", () => {
-  // conditions
+  // LAUNCH FUNCTION ON CHANGE
   ifCheckboxFilled();
 });

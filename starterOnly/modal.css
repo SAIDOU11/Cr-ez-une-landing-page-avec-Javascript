@@ -531,8 +531,8 @@ footer {
     opacity: 1;
   }
 }
-
-/* FORMULAIRE DE CONFIRMATION  */
+/* ALL MY MODIFICATIONS */
+/* FORM CONFIRM  */
 
 .formConfirmation {
   padding: 3rem 8%;
@@ -549,7 +549,7 @@ footer {
   margin-top: 150px;
 }
 
-/* BOUTON DE CONFIRMATION */
+/* BUTTON CLOSE CONFIRM */
 .btn-close-confirm2 {
   background: #fe142f;
   display: block;
@@ -564,7 +564,7 @@ footer {
 }
 
 /* MEDIA QUERIES PHONE SIZE */
-/*  */
+
 @media screen and (max-width: 425px) {
   /* BODY */
   body {

@@ -9,13 +9,13 @@ import {
   ifCheckboxFilled,
 } from "./validation.js";
 
-// Const
+// CONST
 const btnSubmit = document.querySelector(".btn-submit");
 const modalConfirmation = document.querySelector(".formConfirmation");
 const btnCloseConfirm = document.querySelector(".btn-close-confirm2");
 const form = document.querySelector("form");
 
-// function button submit
+// FUNCTION BUTTON SUBMIT WITH ALL FUNCTIONS IMPORTED
 btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   if (
@@ -27,15 +27,15 @@ btnSubmit.addEventListener("click", (e) => {
     controlCheckbox(),
     ifCheckboxFilled())
   ) {
+    // CONDITIONS TO OPEN OR TO GET BACK TO FILL THE FORM
     modalConfirmation.style.display = "block";
     form.style.display = "none";
   } else {
     alert("Merci de remplir correctement votre inscription.");
   }
-}); //
+});
 
-// function to close modal of subscription
-
+// FUNCTION TO CLOSE MODAL OF SUBSCRIPTION
 btnCloseConfirm.addEventListener("click", () => {
   window.location.reload();
 });
