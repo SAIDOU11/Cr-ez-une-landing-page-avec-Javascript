@@ -28,7 +28,7 @@ export const validFirst = () => {
     firstMessage.style.marginBottom = "5px";
     return true;
   } else {
-    firstMessage.textContent = "Prénom Non Valide";
+    firstMessage.textContent = "Veuillez entrez un prénom valide";
     firstMessage.style.fontSize = "15px";
     firstMessage.style.color = "red";
     firstMessage.style.marginBottom = "5px";
@@ -44,13 +44,13 @@ export const validLast = () => {
   let lastTest = lastRegExp.test(lastValue);
   // CONDITION IF ELSE
   if (lastTest) {
-    lastMessage.textContent = "Nom Valide";
+    lastMessage.textContent = "Nom valide";
     lastMessage.style.fontSize = "15px";
     lastMessage.style.color = "green";
     lastMessage.style.marginBottom = "5px";
     return true;
   } else {
-    lastMessage.textContent = "Nom Non Valide";
+    lastMessage.textContent = "Veuillez entrez un nom validee";
     lastMessage.style.fontSize = "15px";
     lastMessage.style.color = "red";
     lastMessage.style.marginBottom = "5px";
@@ -68,13 +68,13 @@ export const validEmail = () => {
   let emailTest = emailRegExp.test(emailValue);
   // CONDITION IF ELSE
   if (emailTest) {
-    emailMessage.textContent = "Adresse Valide";
+    emailMessage.textContent = "Adresse e-mail valide";
     emailMessage.style.fontSize = "15px";
     emailMessage.style.color = "green";
     emailMessage.style.marginBottom = "5px";
     return true;
   } else {
-    emailMessage.textContent = "Adresse Non Valide";
+    emailMessage.textContent = "Veuillez entrez une adresse e-mail valide";
     emailMessage.style.fontSize = "15px";
     emailMessage.style.color = "red";
     emailMessage.style.marginBottom = "5px";
@@ -97,7 +97,7 @@ export const validBirthDate = () => {
     birthMessage.style.marginBottom = "5px";
     return true;
   } else {
-    birthMessage.textContent = "Vous devez entrer votre date de naissance.";
+    birthMessage.textContent = "Veuillez entrez une date de naissanc valide.";
     birthMessage.style.fontSize = "15px";
     birthMessage.style.color = "red";
     birthMessage.style.marginBottom = "5px";
@@ -118,7 +118,7 @@ export const validQuantity = () => {
     quantityMessage.style.marginBottom = "5px";
     return true;
   } else {
-    quantityMessage.textContent = "Quantité Non Valide";
+    quantityMessage.textContent = "Veuillez entrez une quantité Non Valide";
     quantityMessage.style.fontSize = "15px";
     quantityMessage.style.color = "red";
     quantityMessage.style.marginBottom = "5px";
@@ -142,7 +142,7 @@ export const controlCheckbox = () => {
       locationMessage.style.marginBottom = "10px";
       return true;
     } else {
-      locationMessage.textContent = "Champ Invalide";
+      locationMessage.textContent = "Veuillez renseigner un champ location";
       locationMessage.style.color = "red";
       locationMessage.style.fontSize = "15px";
       locationMessage.style.marginBottom = "10px";
