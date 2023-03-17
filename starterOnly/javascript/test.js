@@ -1,3 +1,1 @@
-function add() {
-  console.log("add");
-}
+github bug
